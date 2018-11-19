@@ -3,9 +3,9 @@ class CashRegister
   
   attr_accessor :total, :discount
 
-  def initialize(discount=nil)
+  def initialize(discount=0)
     @total = 0
-    if discount != nil
+    if discount > 0
       @discount = discount
     end
   end 
@@ -20,10 +20,9 @@ class CashRegister
   end
   
   def apply_discount
-    self.discount = sel.fdiscount / 100
-    binding.pry
-    @total = @total * @discount
-    @total
+    discount = @discount.to_f / 100
+    @total = (@total - (@total*discount)).to_i 
+    
   end
   
   
