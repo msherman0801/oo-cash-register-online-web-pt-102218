@@ -3,6 +3,8 @@ class CashRegister
   
   attr_accessor :total, :discount
 
+  @@items = p[]
+
   def initialize(discount=0)
     @total = 0
     if discount > 0
@@ -30,5 +32,6 @@ class CashRegister
     end
   end
   
+  def items
   
 end
