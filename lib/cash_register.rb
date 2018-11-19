@@ -1,9 +1,9 @@
 require 'pry'
 class CashRegister
   
-  attr_accessor :total, :discount
+  attr_accessor :total, :discount, :items
 
-  @items = []
+  @@items = []
 
   def initialize(discount=0)
     @total = 0
@@ -14,7 +14,7 @@ class CashRegister
   
 
   def add_item(title, price, quantity=1)
-    @items << title
+    @@items << title
     if quantity > 1
       @total += (price*quantity)
     else
@@ -34,11 +34,11 @@ class CashRegister
   end
   
   def items
-    @items 
+    @@items 
   end
   
   def void 
-    @items.delete(@items.last)
+    @@items.delete(@@items.last)
   end
   
 end
