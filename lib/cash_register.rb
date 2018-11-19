@@ -39,5 +39,6 @@ class CashRegister
   
   def void 
     @@items.delete(@@items.last)
+  end
   
 end
