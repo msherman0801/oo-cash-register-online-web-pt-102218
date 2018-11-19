@@ -19,6 +19,8 @@ class CashRegister
     else
       @total += price 
     end
+    
+    @items.push(title)
   end
   
   def apply_discount
