@@ -32,10 +32,5 @@ class CashRegister
       "There is no discount to apply."
     end
   end
-  
-  
-  def void 
-    @items.delete(@items.last)
-  end
-  
+
 end
