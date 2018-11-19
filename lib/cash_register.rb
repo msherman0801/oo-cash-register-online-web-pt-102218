@@ -33,11 +33,11 @@ class CashRegister
   end
   
   def items
-    @@items 
+    @items 
   end
   
   def void 
-    @@items.delete(@@items.last)
+    @items.delete(@items.last)
   end
   
 end
